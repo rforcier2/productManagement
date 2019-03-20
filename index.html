@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link type="text/css" rel="stylesheet" href="./vendor/bootstrap.min.css">
+
+    <!--Custom CSS for this program-->
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+    <!--
+      HEADING
+    -->
+    <h1>Product Manager 3000</h1>
+
+    <div id="errors" class="alert alert-danger" role="alert">
+      Please Fix the Following Errors:
+      <div id="error"></div>
+    </div>
+
+    <div id="successDiv">
+      Operations / Results:
+      <div id="success" class="alert alert-light" role="alert"></div>
+    </div>
+
+
+    <div id="currentDiv">
+      Current Operations Queue:
+    <div id="currentQueue" class="alert alert-info" role="alert"></div>
+    </div>
+
+    <!--
+      FORM:
+    -->
+    <form>
+      <!--Main Operation:-->
+      <div class="form-group">
+        <label for="Operation">Select Operation:</label>
+        <select id="selectOperation" class="form-control">
+          <option selected>Choose...</option>
+          <option value="createProduct">Create Product</option>
+          <option value="updateProduct">Update Product</option>
+          <option value="deleteProduct">Delete Product</option>
+          <option value="findProductById">Find Product Id</option>
+          <option value="findProductByTitle">Find Product Title</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div id="productIdDiv" class="form-group col-md-6">
+          <label for="id">Product Id:</label>
+          <input type="text" class="form-control" id="productId" placeholder="Product Id">
+        </div>
+
+        <div id="productTitleDiv" class="form-group col-md-6">
+          <label for="title">Product Title:</label>
+          <input type="text" class="form-control" id="productTitle" placeholder="Product Title">
+        </div><!--/.form-group-->
+
+      </div><!-- /.form-row -->
+
+      <button id="operationQueue" type="button" class="btn btn-primary">Add Operation To Queue</button>
+
+      <button id="operationSubmit" type="button" class="btn btn-success">Submit Operations</button>
+
+      <button id="refresh" type="button" class="btn btn-seconday">Refresh List</button>
+
+    </form>
+
+    <table id="allItems" class="table">
+        <thead>
+          <tr>
+            <th scope="col">Product ID #</th>
+            <th scope="col">Product Name</th>
+          </tr>
+        </thead>
+        <tbody>
+        <!--/tbody /table in script-->
+
+    </div><!--/.container-->
+
+    <!--
+      - jQuery.min.js
+      - Popper.min.js
+      - Bootstrap.min.js
+    -->
+    <script src="./vendor/jquery.min.js"></script>
+    <script src="./vendor/popper.min.js"></script>
+    <script src="./vendor/bootstrap.min.js"></script>
+
+    <!--
+      - Custom Script for this Program
+    -->
+    <script src="./scripts/ProductManager.js"></script>
+    <script src="./scripts/main.js"></script>
+
+  </body>
+</html>
